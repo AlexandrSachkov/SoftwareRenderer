@@ -1,0 +1,16 @@
+ambient (1, 1, 1)
+surface (1, 0, 0)
+depth 35 45 (0, 0, 0)
+{
+    {
+	translate 0, 0, -1
+	camera -1 -1 1 1 0.01 1000 
+	}
+    
+translate 0, 0, 40
+rotate Y 90
+
+scale 0.1, 0.1, 0.1
+
+obj "Wolf"
+}

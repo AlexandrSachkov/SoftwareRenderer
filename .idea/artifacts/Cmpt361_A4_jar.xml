@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Cmpt361-A4:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Cmpt361_A4_jar</output-path>
+    <root id="archive" name="Cmpt361-A4.jar">
+      <element id="module-output" name="Cmpt361-A4" />
+    </root>
+  </artifact>
+</component>
