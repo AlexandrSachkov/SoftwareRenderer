@@ -19,8 +19,45 @@ public class A4Client implements PageTurner {
 
     public A4Client(Drawable drawable, List<String> args) {
         this.pages.add(new CanvasPage(drawable, (List<DisplayArea> sectors) -> {
-            Vector<String[]> commands = Utility.loadCommandsFromFile(args.get(0));
+            Vector<String[]> commands = Utility.loadCommandsFromFile("cube_shading_test");
 
+            Renderer renderer = new Renderer();
+            renderer.setDisplayArea(sectors.get(0));
+            renderer.clearDisplayArea(new Color(0, 0,0));
+
+            Utility.renderCommandList(renderer, commands);
+        }));
+        this.pages.add(new CanvasPage(drawable, (List<DisplayArea> sectors) -> {
+            Vector<String[]> commands = Utility.loadCommandsFromFile("pageA");
+
+            Renderer renderer = new Renderer();
+            renderer.setDisplayArea(sectors.get(0));
+            renderer.clearDisplayArea(new Color(0, 0,0));
+
+            Utility.renderCommandList(renderer, commands);
+        }));
+        this.pages.add(new CanvasPage(drawable, (List<DisplayArea> sectors) -> {
+            Vector<String[]> commands = Utility.loadCommandsFromFile("flat_test");
+
+            Renderer renderer = new Renderer();
+            renderer.setDisplayArea(sectors.get(0));
+            renderer.clearDisplayArea(new Color(0, 0,0));
+
+            Utility.renderCommandList(renderer, commands);
+        }));
+        this.pages.add(new CanvasPage(drawable, (List<DisplayArea> sectors) -> {
+            Vector<String[]> commands = Utility.loadCommandsFromFile("flat_test3l");
+
+            Renderer renderer = new Renderer();
+            renderer.setDisplayArea(sectors.get(0));
+            renderer.clearDisplayArea(new Color(0, 0,0));
+
+            Utility.renderCommandList(renderer, commands);
+        }));
+        this.pages.add(new CanvasPage(drawable, (List<DisplayArea> sectors) -> {
+            Vector<String[]> commands = Utility.loadCommandsFromFile("phong_test");
+
+            Renderer renderer = new Renderer();
             renderer.setDisplayArea(sectors.get(0));
             renderer.clearDisplayArea(new Color(0, 0,0));
 
